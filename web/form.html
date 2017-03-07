@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        input[type=text], select {
+            width: 75%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 75%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Web Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function checkForm() {
+            var firstName = document.form1.firstName.value;
+            var lastName = document.form1.lastName.value;
+            var Phone = document.form1.Phone.value;
+            var City= document.form1.City.value;
+            var State = document.form1.State.value;
+            var Zip = document.form1.Zip.value
+
+            alert("name is " + firstName + lastName);
+            if (firstName === "" || firstNameame === null) {
+                alert("Sorry, name field must be filled in");
+                return false;
+            }
+            else if (lastName === "" || lastNameName === null) {
+                alert("Sorry, name field must be filled in");
+                return false;
+            }
+            else if( Phone === " " || Phone === null) {
+                alert("Sorry, name field must be filled in");
+                return false;
+            } else if( City === " " || City === null) {
+                    alert("Sorry, name field must be filled in");
+                    return false;
+            }else if( State === " " || State === null) {
+                alert("Sorry, name field must be filled in");
+                return false;
+            } else if( Zip === " " ||Zip === null) {
+                alert("Sorry, name field must be filled in");
+                return false;
+
+            } else {
+                return true;
+            }
+        }
+
+
+    </script>
+</head>
+<body  background= "http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg">
+
+<form name="form1" action="process.jsp" method="post">
+    Name: <input type="text" name="firstName"><br>
+    Last Name: <input type="text" name="lastName"><br>
+    Phone: <input type="text" name="Phone"><br>
+    City:<input type="text" name="City"><br>
+    State<input type="text" name="State"><br>
+    Zip:<input type="text" name="Zip"><br>
+
+   <h2>Class Selection</h2><br>
+
+    <input type="checkbox" name="classes" value="Crochet">Crochet<br>
+        <input type="checkbox" name="classes" value="Softball Fundmentals" checked> Softball Fundmentals<br>
+        <input type="checkbox" name="classes" value="Cake Deccoating"> Cake Deccoating<br>
+         <input type="checkbox" name="classes" value="Jewrely Making" checked> Jewrely Making<br>
+        <input type="submit" value="Submit">
+
+
+</form>
+</body>
+</html>
