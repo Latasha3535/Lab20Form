@@ -4,7 +4,7 @@
 <head>
     <style>
         input[type=text], select {
-            width: 75%;
+            width: 50%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -14,7 +14,7 @@
         }
 
         input[type=submit] {
-            width: 100%;
+            width: 50%;
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
@@ -37,63 +37,31 @@
 
     <meta charset="UTF-8">
     <title>Web Form</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script>
-        function checkForm() {
-            var firstName = document.form1.firstName.value;
-            var lastName = document.form1.lastName.value;
-            var Phone = document.form1.Phone.value;
-            var City= document.form1.City.value;
-            var State = document.form1.State.value;
-            var Zip = document.form1.Zip.value
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script type="text/javascript" src="validation.js"></script>
 
-            alert("name is " + firstName + lastName);
-            if (firstName === "" || firstNameame === null) {
-                alert("Sorry, name field must be filled in");
-                return false;
-            }
-            else if (lastName === "" || lastNameName === null) {
-                alert("Sorry, name field must be filled in");
-                return false;
-            }
-            else if( Phone === " " || Phone === null) {
-                alert("Sorry, name field must be filled in");
-                return false;
-            } else if( City === " " || City === null) {
-                    alert("Sorry, name field must be filled in");
-                    return false;
-            }else if( State === " " || State === null) {
-                alert("Sorry, name field must be filled in");
-                return false;
-            } else if( Zip === " " ||Zip === null) {
-                alert("Sorry, name field must be filled in");
-                return false;
-
-            } else {
-                return true;
-            }
-        }
-
-
-    </script>
 </head>
 <body  background= "http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg">
 
-<form name="form1" action="process.jsp" method="post">
-    Name: <input type="text" name="firstName"><br>
-    Last Name: <input type="text" name="lastName"><br>
+<form name="form1" action="process.jsp" method="post" onsubmit="return checkForm()" onsubmit="validateEmail()">
+    First: <input type="text" name="firstName"><br>
+    Last : <input type="text" name="lastName"><br>
     Phone: <input type="text" name="Phone"><br>
-    City:<input type="text" name="City"><br>
-    State<input type="text" name="State"><br>
-    Zip:<input type="text" name="Zip"><br>
+    City:  <input type="text" name="City"><br>
+    State: <input type="text" name="State"><br>
+    Zip:   <input type="text" name="Zip"><br>
 
    <h2>Class Selection</h2><br>
 
-    <input type="checkbox" name="classes" value="Crochet">Crochet<br>
-        <input type="checkbox" name="classes" value="Softball Fundmentals" checked> Softball Fundmentals<br>
-        <input type="checkbox" name="classes" value="Cake Deccoating"> Cake Deccoating<br>
-         <input type="checkbox" name="classes" value="Jewrely Making" checked> Jewrely Making<br>
-        <input type="submit" value="Submit">
+        <input type="checkbox" name="Class" value="Crochet">Crochet<br>
+        <input type="checkbox" name="Class" value="Softball Fundmentals"> Softball Fundmentals<br>
+        <input type="checkbox" name="Class" value="Cake Deccoating"> Cake Deccoating<br>
+        <input type="checkbox" name="Class" value="Jewrely Making"> Jewrely Making<br>
+        <input type="checkbox" name="Class" value="Basketball Fundmentals"> Basketball Fundmentals<br>
+        <input type="checkbox" name="Class" value="Hitting Fundmentals"> Hitting Fundmentals<br>
+        <input type="checkbox" name="Class" value="Coaching Techniquie"> Coaching Techniquie<br>
+        <input type="checkbox" name="Class" value="Bowling 101">Bowling 101<br>
+        <input type="submit" value="Submit" >
 
 
 </form>
